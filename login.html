@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/register.css">
+    <style>
+        .login{
+            width: 100px;
+        }
+        .forget{
+            width:308px;
+            text-align: right;
+            margin-top: 10px;
+        }
+        .forget a{
+            color: blue;
+        }
+        .forget a:hover{
+            text-decoration: underline;
+        }
+        .coo_img{
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="head">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="images/logoR.jpg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="images/title.gif" alt="">
+                        </a>
+                    </div>
+                    <div class="content">
+                        <div class="top">
+                            <a href="index.html">首页</a>
+                            <span class="pipe">|</span>
+                            <a href="#">分类</a>
+                            <span class="pipe">|</span>
+                            <a href="#">有路联盟</a>
+                            <span class="pipe">|</span>
+                            <a href="#">信用评级</a>
+                            <form action="#">
+                                搜索书名：
+                                <input type="text">
+                                <button>搜索</button>
+                            </form>
+                        </div>
+                        <div class="bottom">
+                            <span>欢迎您，访客！</span>
+                            <a href="#">[登录]</a>
+                            <a href="register.html">免费注册</a>
+                            <span class="pipe">|</span>
+                            <a href="#">网站购物车</a>
+                            <span class="pipe">|</span>
+                            <a href="#">店铺购物车</a>
+                            <span class="pipe">|</span>
+                            <a href="#">我的有路</a>
+                            <span class="pipe">|</span>
+                            <a href="#">客服中心</a>
+                            <span class="pipe">|</span>
+                            <a href="#">帮助</a>
+                        </div>
+                    </div>
+    </div>
+    <div class="now">
+        <span>当前位置：</span>
+        <a href="#">有路网</a>
+        <span>&gt;</span>
+        <a href="#">我的有路</a>
+        <span>&gt;</span>
+        <a href="#" class="register">会员登录</a>
+    </div>
+    <div class="register_bd">
+        <p class="register_title">
+            <img src="images/ic_user.gif" alt="">
+            有路网会员登录</p>
+        <div class="info">
+            <form action="#">
+                <div class="info_item">
+                     <p><span>请输入您的昵称:</span><input type="text" maxlength="20" id="user"></p>
+                     <p class="tips">昵称可随时修改</p>
+                </div> 
+               <div class="info_item">
+                    <p><span>请输入密码:</span><input type="password" id="pwd"></p>
+                    <P class="tips">登录有路网的密码</P>
+                </div>
+                <div class="info_item">
+                   <a href="#" class="proving">使用短信验证码登录</a>
+                   <button class="login">登录</button>
+                   <div class="forget"><a href="#">忘记密码?</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="register.html">注册</a></div>
+                </div>
+                <div class="coo">
+                    <p>通过合作网站登录有路：</p>
+                    <div class="coo_img">
+                        <img src="images/login_qq.gif" alt="">
+                        <img src="images/login_weibo.gif" alt="">
+                    </div>
+                </div>
+           </form>
+        </div>
+    </div>
+</div>  
+<div class="footer" style="padding-top:100px;">
+        <p class="bottom_line"></p>
+        <div class="link_help">
+            <a href="#">如何买书</a>
+            <span class="pipe">|</span>
+            <a href="#">如何结算</a>
+            <span class="pipe">|</span>
+            <a href="#">如何支付</a>
+            <span class="pipe">|</span>
+            <a href="#">如何退货</a>
+            <span class="pipe">|</span>
+            <a href="#">配送介绍</a>
+            <span class="pipe">|</span>
+            <a href="#">普通用户与VIP</a>
+            <span class="pipe">|</span>
+            <a href="#">账户余额介绍</a>
+            <span class="pipe">|</span>
+            <a href="#">积分介绍</a>
+            <span class="pipe">|</span>
+            <a href="#">礼券介绍</a>
+            <span class="pipe">|</span>
+            <a href="#">更多介绍...</a>
+        </div>
+        <div class="copyRight">
+                Copyright © 书山有路 All Rights Reserved
+        </div>
+</div> 
+<script src="script/ajax.js"></script>
+<script>
+var oBtn = document.querySelector(".login");
+    var oUser = document.getElementById("user");
+    var oPass = document.getElementById("pwd");
+    var flag=false;
+    oBtn.onclick = function(){
+        var sUser = oUser.value;
+        var sPass = oPass.value;
+        ajaxPost("http://localhost/youlu/php/login.php",`user=${sUser}&pwd=${sPass}`)
+        .then(function(res){
+            alert(res); 
+            if(res=="登陆成功"){
+            flag=true;
+            window.location.href="index.html#"+sUser;  
+            }
+            else{
+            flag=false;
+            return false;
+            window.location.href="login.html"; 
+            }
+       })
+    }
+</script> 
+</body>
+</html>

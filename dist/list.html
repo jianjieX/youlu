@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>列表页</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/active.css">
+</head>
+<body>
+ 
+<div class="topBar">
+    <div class="topWrap">
+            <div class="topWrapL">
+                <img src="images/welcome.jpg" alt="">
+                <span>您好，欢迎光临有路网！</span>
+            </div>
+            <ul class="topWrapR">
+                <li class="topItem">
+                    <a href="login.html" class="login">请登录</a>
+                    <a href="register.html" class="register">免费注册</a>
+                </li>
+                <li class="pipe">|</li>
+                <li class="topItem">
+                    <div class="menu_hd">
+                        <a href="#" class="myYoulu">我的有路</a>
+                        <b></b>
+                    </div>
+                    <ul class="menu_list">
+                        <li><a href="#">自营订单</a></li>
+                        <li><a href="#">店铺订单</a></li>
+                        <li><a href="#">团购订单</a></li>
+                        <li><a href="#">我的余额</a></li>
+                        <li><a href="#">我的校园</a></li>
+                    </ul>
+                </li>
+                <li class="pipe">|</li>
+                <li class="topItem">
+                    <a href="#">我要开店</a>
+                </li>
+                <li class="pipe">|</li>
+                <li class="topItem">
+                    <div class="menu_hd">
+                        <a href="#" class="phoneYoulu">
+                        <img src="images/ico_phone.gif" alt="">手机有路</a>
+                    </div>
+                    <div class="drop">
+                        <div class="drop_hd"></div>
+                        <div class="drop_bd">
+                            <h3>有路客户端</h3>
+                            <img src="images/android_qr.jpg" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li class="pipe">|</li>
+                <li class="topItem">
+                    <div class="menu_hd">
+                        <a href="#">微信公众号</a>
+                    </div>
+                    <div class="drop">
+                        <div class="drop_hd"></div>
+                        <div class="drop_bd">
+                            <h3>打开微信扫一扫</h3>
+                            <img src="images/weixin.gif" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li class="pipe">|</li>
+                <li class="topItem">
+                    <a href="#">团购批发</a>
+                </li>
+                <li class="pipe">|</li>
+                <li class="topItem">
+                    <div class="menu_hd">
+                        <a href="#" class="serivce">客服服务</a>
+                        <b></b>
+                    </div>
+                    <ul class="menu_list">
+                        <li><a href="#">联系客服</a></li>
+                        <li><a href="#">帮助中心</a></li>
+                    </ul>
+                </li>
+            </ul> 
+    </div>
+</div> 
+    <!-- 顶部菜单栏 结束-->   
+    <!-- 搜索部分开始 -->
+<div class="searchWrap">
+        <div class="searchBar">
+            <h1 class="logo">
+                <a href="#">
+                    <img src="images/logo.jpg" alt="">
+                </a>
+            </h1>
+            <div class="search">
+                <div class="searchFrame">
+                    <form action="#">
+                        <div class="search_combox">
+                            <input type="text" class="bookName">
+                        </div>
+                        <div class="search_btn">
+                            <input type="submit" class="keyBtn" value="搜索">
+                        </div>
+                        <label>书名、作者、出版社、ISBN、文具</label>
+                    </form>
+                </div>
+                <div class="search_tip">
+                    <a href="#">同店找书</a>
+                    <div class="pipe">|</div>
+                    <a href="#">高级搜索</a>
+                </div>
+                <div class="search_hot">
+                    <strong>热门搜索：</strong>
+                    <a href="#">计算机网络</a>
+                    <a href="#">高等数学</a>
+                    <a href="#">新概念英语</a>
+                    <a href="#">管理学</a>
+                </div>
+            </div>
+            <div class="cart">
+                <a href="#">网站购物车
+                    <span class="counts">0</span>本
+                </a>
+                <a href="#">店铺购物车
+                    <span class="counts">0</span>本
+                </a>
+                <div class="img_show">
+                    <ul class="img_show_list">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+</div> 
+<div class="nav">
+    <div class="nav_bd">
+        <div class="nav_bar">
+                <div class="nav_sort">
+                    <div class="sortAll">
+                        <h2>
+                            <a href="#">全部图书分类
+                            <span></span>
+                            </a>
+                        </h2>
+                    </div>
+                </div>
+                <div class="navR">
+                    <ul class="nav_list">
+                        <li class="nav_item">
+                            <a href="index.html">首页</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#">分类</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#">入驻商家</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#">文具</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#">电子书</a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+</div>
+
+<div class="another">
+    <div class="wrap_list">
+        <ul class="bookList">
+           
+        </ul>
+    </div>
+</div> 
+<script src="script/jquery.js"></script>
+<script src="script/click.js"></script> 
+<script src="script/jquery.cookie.js"></script>
+<script src="script/shopCarActive.js"></script>
+<script>
+    function List(){};
+    $.extend(List.prototype,{
+        init:function(){
+            this.main=$(".bookList")
+            this.loadJson()
+            .then(function(res){
+                this.json=res.subjects;
+                this.rederPage();
+             })
+        },
+        loadJson(){
+           var opt={
+               url:"data.json",
+               data:{start:0,count:20},
+               context:this
+           };
+           return $.ajax(opt); 
+        },
+        rederPage(){
+            var html="";
+            for(i=0;i<this.json.length;i++){
+                html+=`<li class="bookList_item">
+               <div class="allInfo">
+                   <a href="#">
+                       <img src="${this.json[i].images.small}" alt="">
+                   </a>
+                   <div class="bookname">
+                       <a href="#">${this.json[i].title}</a>
+                   </div>
+                   <div class="nowPrice">￥23.00</div>
+                   <div class="agoPrice">￥36.00</div>
+               </div>
+               <div class="buy_btn">
+                    <div class="buyIt">
+                        <a href="details.html#${this.json[i].id}";>购买</a>
+                    </div>
+               </div>
+           </li>`;
+            }
+           
+            this.main.html(html);
+        }
+    })
+    var list=new List();
+    list.init();
+</script>
+</body>
+</html>

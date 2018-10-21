@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+<div class="main">
+    <div class="head">
+        <div class="logo">
+            <a href="#">
+                <img src="images/logoR.jpg" alt="">
+            </a>
+            <a href="#">
+                <img src="images/title.gif" alt="">
+            </a>
+        </div>
+        <div class="content">
+            <div class="top">
+                <a href="index.html">首页</a>
+                <span class="pipe">|</span>
+                <a href="#">分类</a>
+                <span class="pipe">|</span>
+                <a href="#">有路联盟</a>
+                <span class="pipe">|</span>
+                <a href="#">信用评级</a>
+                <form action="#">
+                    搜索书名：
+                    <input type="text">
+                    <button>搜索</button>
+                </form>
+            </div>
+            <div class="bottom">
+                <span>欢迎您，访客！</span>
+                <a href="login.html">[登录]</a>
+                <a href="#">免费注册</a>
+                <span class="pipe">|</span>
+                <a href="#">网站购物车</a>
+                <span class="pipe">|</span>
+                <a href="#">店铺购物车</a>
+                <span class="pipe">|</span>
+                <a href="#">我的有路</a>
+                <span class="pipe">|</span>
+                <a href="#">客服中心</a>
+                <span class="pipe">|</span>
+                <a href="#">帮助</a>
+            </div>
+        </div>
+    </div>
+    <div class="now">
+        <span>当前位置：</span>
+        <a href="#">有路网</a>
+        <span>&gt;</span>
+        <a href="#">我的有路</a>
+        <span>&gt;</span>
+        <a href="#" class="register">会员注册</a>
+    </div>
+    <div class="register_hd">
+        <p class="title1">有路网提供：200万种图书、新书比价、免费加盟店、网店自助代购、有路联盟。</p>
+        <p class="title2">支付宝 财付通 网上银行 银行汇款多种支付方式。</p>
+        <p class="title3">平邮 快递 EMS 货到付款 自取 多重送货方式。</p>
+        <p class="title4">立刻注册会员享受 淘书 出售 求购 交易乐趣！</p>
+    </div>
+    <div class="register_bd">
+        <p class="register_title">
+            <img src="images/ic_user.gif" alt="">
+            有路网会员注册</p>
+        <div class="info">
+            <form action="#">
+                 <div class="info_item">
+                     <p><span>请输入您的昵称:</span><input type="text" maxlength="20" id="username"></p>
+                     <p class="tips t1">昵称可随时修改，长度限制：2-20。</p>
+                </div> 
+                <div class="info_item">
+                    <p><span>请输入您的email:</span><input type="text" id="email"></p>
+                    <p class="tips t2">请填写您常用的Emai地址作为您在有路网的帐号</p>
+                </div>
+                <div class="info_item">
+                    <p><span>请输入密码:</span><input type="password" id="pwd" maxlength="16"></p>
+                    <P class="tips t3">登录有路网的密码，由6-16个字符组成。</P>
+                </div>
+                <div class="info_item">
+                    <p><span>请重复您的密码:</span><input type="password" id="resetPwd" maxlength="16"></p>
+                    <P class="tips t4">请再输入一遍您上面输入的密码。</P>
+                </div>
+                <div class="info_item">
+                    <a href="#" class="proving">使用短信验证码登录</a>
+                   <button class="btn">填写完毕，提交注册信息</button>
+                </div>
+           </form>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <p class="bottom_line"></p>
+    <div class="link_help">
+        <a href="#">如何买书</a>
+        <span class="pipe">|</span>
+        <a href="#">如何结算</a>
+        <span class="pipe">|</span>
+        <a href="#">如何支付</a>
+        <span class="pipe">|</span>
+        <a href="#">如何退货</a>
+        <span class="pipe">|</span>
+        <a href="#">配送介绍</a>
+        <span class="pipe">|</span>
+        <a href="#">普通用户与VIP</a>
+        <span class="pipe">|</span>
+        <a href="#">账户余额介绍</a>
+        <span class="pipe">|</span>
+        <a href="#">积分介绍</a>
+        <span class="pipe">|</span>
+        <a href="#">礼券介绍</a>
+        <span class="pipe">|</span>
+        <a href="#">更多介绍...</a>
+    </div>
+    <div class="copyRight">
+            Copyright © 书山有路 All Rights Reserved
+    </div>
+</div> 
+<script src="script/jquery.js"></script>
+<script src="script/ajax.js"></script>
+<script>
+    var flag=false;
+    $("#username").blur(function(){
+        var value=this.value;
+        var regUser=/^[\u4e00-\u9fa5a-zA-Z0-9\-_]{2,20}$/;
+        if(regUser.test(value)){
+            flag=true;
+            $(".t1").html("您的昵称有效")
+            $(".t1").css({
+                color:"green"
+            })
+        }
+        else{
+            flag=false;
+            $(".t1").html("对不起，您输入的昵称有误")
+            $(".t1").css({
+                color:"red"
+            })
+        }
+    })
+    $("#email").blur(function(){
+        var value=this.value;
+        var regEmail=/^[0-9a-z]{5,17}@[a-z0-9]{2,8}\.[a-z]{2,5}$/;
+        if(regEmail.test(value)){
+            flag=true;
+            $(".t2").html("您输入的邮箱有效")
+            $(".t2").css({
+                color:"green"
+            })
+        }else{
+            flag=false;
+            $(".t2").html("对不起，您输入的邮箱不符合规范")
+            $(".t2").css({
+                color:"red"
+            })
+        }
+    })
+    $("#pwd").blur(function(){
+        var value=this.value;
+		var regPwd=/^[a-z0-9\!\@\#\$\%\^\&\*\(\)\-_]{6,16}$/;
+		if(regPwd.test(value)){
+            flag=true;
+			var rate=0;
+			var regPwdNum=/\d/;
+			var regWord=/[\@\#\$\%\^\&\*\(\)\-_]/;
+			var regSymbol=/[a-z]/;
+			if(regPwdNum.test(value)){
+				rate++;
+			}
+			if(regWord.test(value)){
+				rate++;
+			}
+			if(regSymbol.test(value)){
+				rate++;
+			}
+			switch(rate){
+				case 1:
+				$(".t3").html("有被盗风险,建议使用字母、数字和符号两种及以上组合");
+				$(".t3").css({
+                color:"red"
+                })
+				break;
+                case 2:
+                $(".t3").html("安全强度适中，可以使用三种以上的组合来提高安全强度");
+				$(".t3").css({
+                color:"orange"
+                })
+				break;
+                case 3:
+                $(".t3").html("你的密码很安全");
+				$(".t3").css({
+                color:"green"
+                })
+				break;
+			}
+		}
+		else{
+            flag=false;
+            $(".t3").html("对不起您输入的密码有误");
+			$(".t3").css({
+                color:"red"
+            })
+		}
+    })
+    $("#resetPwd").blur(function(){
+        if(this.value==$("#pwd")[0].value&&this.value!=""){
+            flag=true;
+            $(".t4").html("密码输入正确");
+            $(".t4").css({
+                color:"green"
+            })
+        }else{
+            flag=false;
+            $(".t4").html("对不起，您输入的密码有误");
+            $(".t4").css({
+                color:"red"
+            })
+        } 
+    })
+    $(".btn").click(function(){
+        var sUser=$("#username")[0].value;
+		var sPwd=$("#pwd")[0].value;
+		var sRestPwd=$("#resetPwd")[0].value;
+        var sEmail=$("#email")[0].value;
+        if(!flag){
+            return false;
+        }
+        ajaxPost("http://localhost/youlu/php/resiger.php",
+		`user=${sUser}&&pwd=${sPwd}&&restPwd=${sRestPwd}&&email=${sEmail}`)
+		.then(function(res){
+			alert(res);
+			if(res=="恭喜注册成功"){
+				window.location.href="login.html"
+			}
+            else{
+                window.location.href="register.html"
+            }
+		})
+    })
+</script>
+</body>
+</html>

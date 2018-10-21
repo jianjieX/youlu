@@ -1,0 +1,121 @@
+ul,dl,li,ol,p,html,body,h1,h2,h3,h4,h5,h6{
+    margin:0;padding: 0;
+}
+ul,li,ol,dl{
+    list-style: none;
+}
+html,body{
+    font-size: 12px;
+    font-family: "微软雅黑";
+}
+a,u,s{
+    color:#666;
+    text-decoration: none;
+}
+.active_main{
+    width:100%;
+    margin:0 auto;
+    background: #c9291b;
+    background: url(../images/recordmendBookBg.jpg)no-repeat center top;
+}
+.benefits{
+    width: 1200px;
+    margin: 0 auto;
+    height: 686px;
+    overflow: hidden;
+}
+.wrap_info{
+    background: #c9291b;
+    width: 100%;
+}
+.wrap_info a:hover{
+    color: #f60;
+    text-decoration: underline;
+}
+.feilei{
+    width:1200px;
+    margin:0 auto;
+    background-color: #fff;
+    position: relative;
+}
+.feilei p{
+    margin: 0 auto;
+    width: 1200px;
+    height: 50px;
+    text-align: center;
+    color: #fff;
+    line-height: 50px;
+    font-size: 20px;
+    background: url(../images/fenleiBg.jpg)no-repeat center top;
+}
+.wrap_list{
+    width:1200px;
+    margin:0 auto;
+    background: #fff;
+    text-align: center;
+    padding-top: 5px;
+    overflow: hidden;
+}
+.bookList .bookList_item{
+    float: left;
+    width:238px;
+    height: 290px;
+    border-right: 1px solid #dfdedd;
+}
+.allInfo{
+    height: 262px;
+}
+.allInfo img{
+    width:150px;
+    height: 180px;
+}
+.allInfo .bookname{
+    width:200px;
+    margin:0 auto;
+    overflow: hidden;
+}
+.allInfo .nowPrice{
+    font-size: 18px;
+    font-weight: bold;
+    color: #c30;
+}
+.allInfo .agoPrice{
+    color: #787878;
+    text-decoration: line-through;
+}
+.buy_btn{
+    position: relative;
+    height: 28px;
+}
+.buy_btn .buyIt{
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    height: 22px;
+    padding: 0 6px 0 26px;
+    text-align: right;
+    line-height: 22px;
+    overflow: hidden;
+    background: url(../images/bg_buyit.png)no-repeat 0 -25px;
+}
+.slide_ban{
+    position: fixed;
+    width: 100px;
+    background: #a20000;
+    right: -100px;
+    top:100px;
+}
+.slide_ban li{
+    width: 100%;
+    height: 26px;
+    font-size: 13px;
+    line-height: 26px;
+    border-bottom: 1px dashed #cb8c3d;
+    text-align: center;
+}
+.slide_ban li a{
+    color: #fff;
+}
+.slide_ban li a:hover{
+    text-decoration: underline;
+}
